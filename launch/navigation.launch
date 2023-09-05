@@ -1,0 +1,16 @@
+<launch>
+
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch"/>
+    
+    <include file="$(find turtlebot3_navigation)/launch/turtlebot3_navigation.launch">
+    <arg name="map_file" value="$(env HOME)/catkin_ws/src/evo-turtlebot-sim/maps/map.yaml"/>
+    </include>
+    
+    <param name="/amcl/initial_pose_x" value="-2.0"/>
+    <param name="/amcl/initial_pose_y" value="-0.5"/>
+    <param name="/amcl/initial_pose_a" value="0.0"/>
+    
+</launch>
+
+
+
